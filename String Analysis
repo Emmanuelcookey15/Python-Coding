@@ -1,0 +1,17 @@
+def str_analysis():
+    string = input("enter again: ")
+    while not string:
+        string = input("enter again: ")
+    if string.isdigit():
+        string = int(string)
+        if string > 99:
+            print(string, "is a pretty big number")
+        else:
+            print(string, "is a smaller number than expected")
+    elif string.isalpha():
+        print("\"" + string + "\"", "is all alphabetical characters!")
+    else:
+        print("\"" + string + "\"", "is a surprise! It\'s neither all alpha nor all digit characters!")
+
+
+str_analysis()
