@@ -1,0 +1,9 @@
+now = datetime.today()
+c = 1995
+bday = datetime(year=c, month=7, day=28)
+
+while bday.year <= now.year:
+    bdt = bday.strftime("%A, %Y")
+    print(bdt)
+    c += 1
+    bday = datetime(year=c, month=7, day=5)
