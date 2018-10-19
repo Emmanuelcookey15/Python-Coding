@@ -1,0 +1,14 @@
+import os, os.path
+
+os.getcwd()
+print(os.getcwd())
+
+print(os.path.exists("parent_dir"))
+print(os.path.exists("leaf1_txt"))
+
+import os
+
+print(os.getcwd())
+os.chdir("parent_dir")
+print(os.getcwd())
+print(os.listdir())
