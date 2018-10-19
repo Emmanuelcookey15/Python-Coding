@@ -1,0 +1,48 @@
+def adding_report():
+    print("Report Types include all Items (\"A\") or Total Only (\"T\")")
+
+    while True:
+        user1 = input("Choose Report Type (\"A\" or \"T\"): ")
+
+        if user1.upper() == "A":
+            print("Input an integer to add to the total or \"Q\" to quit")
+
+            all_input = 0
+            user_items = ""
+            while True:
+                user2 = input("Enter an integer or \"Q\": ").lower()
+
+                if user2.isdigit():
+                    user_items = user_items + "\n" + user2
+                    user2 = int(user2)
+                    all_input += user2
+                elif user2 == "q":
+                    print("Item", user_items, "\n")
+                    print("Total\n", all_input)
+                    break
+                else:
+                    print(user2 + " is invalid input")
+
+        elif user1.upper() == "T":
+            print("Input an integer to add to the total or \"Q\" to quit")
+
+            all_input = 0
+            user_items = ""
+            while True:
+                user2 = input("Enter an integer or \"Q\": ").lower()
+
+                if user2.isdigit():
+                    user_items = user_items + "\n" + user2
+                    user2 = int(user2)
+                    all_input += user2
+                elif user2 == "q":
+                    print("Total\n", all_input)
+                    break
+                else:
+                    print(user2 + " is invalid input")
+
+        else:
+            print(user1 + " is invalid input")
+
+
+adding_report()
