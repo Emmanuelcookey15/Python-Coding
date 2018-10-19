@@ -1,0 +1,14 @@
+from _datetime import timedelta, datetime, date, time
+
+def european_format(d):
+    return d.strftime("%d/%m/%Y")
+
+
+def american_format(d):
+    return d.strftime("%m/%d/%Y")
+
+
+d = datetime(month=2, year=2012, day=13)
+
+print("American format:", american_format(d))
+print("European format:", european_format(d))
